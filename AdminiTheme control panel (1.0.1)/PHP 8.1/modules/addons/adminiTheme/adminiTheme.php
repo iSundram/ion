@@ -84,7 +84,7 @@ function adminiTheme_output($vars)
     $smarty->assign("modPageTitle", "AdminiTheme Control Panel");
     $smarty->assign("modurl", MODURL);
     $menu->addToBreadCrumbs(MODURL, "AdminiTheme Control Panel");
-    $action = trim($_GET["action"]);
+    $action = isset($_GET["action"]) ? preg_replace('/[^a-zA-Z0-9_-]/', '', trim($_GET["action"])) : "";
     $smarty->assign("action", $action);
     $languages = $menu->getWHMCSLanguages();
     $smarty->assign("languages", $languages);
@@ -119,11 +119,12 @@ function adminiTheme_output($vars)
                         fclose($file);
                     }
                     try {
-                        mysql_query("TRUNCATE TABLE coodiv__control__general__settings;");
+                        Illuminate\Database\Capsule\Manager::table("coodiv__control__general__settings")->truncate();
                         $groupid = Illuminate\Database\Capsule\Manager::table("coodiv__control__general__settings")->insertGetId(["siteaslogo" => (string) $menu->input($_POST["textlogo"]), "customtextlogo" => (string) $menu->input($_POST["customtextlogo"]), "defaultlogolinkicon" => (string) $menu->input($_POST["defaultlogolinkicon"]), "defaultlogolinktagline" => (string) $menu->input($_POST["defaultlogolinktagline"]), "defaultlogolinkfull" => (string) $menu->input($_POST["defaultlogolinkfull"]), "darklogolinkicon" => (string) $menu->input($_POST["darklogolinkicon"]), "darklogolinktagline" => (string) $menu->input($_POST["darklogolinktagline"]), "darklogolinkfull" => (string) $menu->input($_POST["darklogolinkfull"]), "advancedemailverification" => (string) $menu->input($_POST["advancedemailverification"]), "customerspin" => (string) $menu->input($_POST["customerspin"]), "customersnotifications" => (string) $menu->input($_POST["customersnotifications"]), "gravatar" => (string) $menu->input($_POST["gravatar"]), "headeranoncement" => (string) $menu->input($_POST["h-anoncement"]), "userdropdown" => (string) $menu->input($_POST["user-dropdown"]), "notificationdropdown" => (string) $menu->input($_POST["notification-dropdown"]), "cartdropdown" => (string) $menu->input($_POST["cart-dropdown"]), "clientmarketconnect" => (string) $menu->input($_POST["client-marketconnect"]), "servicemarketconnect" => (string) $menu->input($_POST["services-marketconnect"]), "domainmarketconnect" => (string) $menu->input($_POST["domains-marketconnect"]), "loginstyle" => (string) $menu->input($_POST["login-style"]), "registerstyle" => (string) $menu->input($_POST["register-style"]), "cookiesbox" => (string) $menu->input($_POST["cookiesbox"]), "cookiesboxposition" => (string) $menu->input($_POST["cookiesboxposition"]), "cookiesboxtext" => (string) $menu->input($_POST["cookiesboxtext"]), "seositename" => (string) $menu->input($_POST["seostitename"]), "seositedescription" => (string) $menu->input($_POST["seositedesc"]), "seositefavicon" => (string) $menu->input($_POST["seositefavicon"]), "seoorganizationname" => (string) $menu->input($_POST["seoorgname"]), "seoorganizationphonenumber" => (string) $menu->input($_POST["eoorgmobile"]), "seoopengraph" => (string) $menu->input($_POST["seoopengraph"]), "seoalternatewebsitename" => (string) $menu->input($_POST["seoaltername"]), "seowebsitetype" => (string) $menu->input($_POST["seowtype"]), "seocontacttype" => (string) $menu->input($_POST["seocontacttype"]), "seotwitterusername" => (string) $menu->input($_POST["seotwittername"]), "customcsscode" => (string) $menu->input($_POST["customcsscode"]), "headerlanguage" => (string) $menu->input($_POST["headerlanguage"]), "footerlanguagelanguage" => (string) $menu->input($_POST["footerlanguagelanguage"]), "registerformlanguage" => (string) $menu->input($_POST["registerformlanguage"]), "loginformlanguage" => (string) $menu->input($_POST["loginformlanguage"]), "allowproductsliderswitch" => (string) $menu->input($_POST["allowproductsliderswitch"]), "productasslider" => (string) $menu->input($_POST["productasslider"]), "additionelsetting" => (string) $menu->input($_POST["additionelsetting"])]);
                         $menu->redirect(MODURL . "&action=themeoption&success=1");
                         exit;
                     } catch (Exception $e) {
+                        error_log("AdminiTheme Error in applythemeoption: " . $e->getMessage());
                         exit("Error: " . $e->getMessage());
                     }
                 } else {
@@ -170,7 +171,10 @@ function adminiTheme_output($vars)
                                             if (count($row) !== count($columns)) {
                                                 $validData = false;
                                                 $invalidRow = $index + 1;
-                                                if ($validData) {
+                                                break;
+                                            }
+                                        }
+                                        if ($validData) {
                                                     Illuminate\Database\Capsule\Manager::table("coodiv__control__general__settings")->truncate();
                                                     foreach ($csvData as $row) {
                                                         $data = array_combine($columns, $row);
@@ -203,8 +207,7 @@ function adminiTheme_output($vars)
                                 } else {
                                     if ($action == "resetthemecolor") {
                                         try {
-                                            mysql_query("TRUNCATE TABLE coodiv__control__colors__settings;");
-                                            $groupid = Illuminate\Database\Capsule\Manager::table("coodiv__control__colors__settings")->update;
+                                            Illuminate\Database\Capsule\Manager::table("coodiv__control__colors__settings")->truncate();
                                             $menu->redirect(MODURL . "&action=styleoptions&success=1");
                                             exit;
                                         } catch (Exception $e) {
@@ -800,7 +803,10 @@ function adminiTheme_output($vars)
                                                                     if (count($row) !== count($columns)) {
                                                                         $validData = false;
                                                                         $invalidRow = $index + 1;
-                                                                        if ($validData) {
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if ($validData) {
                                                                             Illuminate\Database\Capsule\Manager::table("coodiv__control__colors__settings")->truncate();
                                                                             foreach ($csvData as $row) {
                                                                                 $data = array_combine($columns, $row);

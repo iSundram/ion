@@ -657,8 +657,12 @@ if (!class_exists("adminiTheme")) {
                 Illuminate\Database\Capsule\Manager::table("coodiv__control__panel_items")->insert(["groupid" => $groupid, "topid" => $menuItemLogout, "parentid" => $menuItemAccount, "title" => (string) $translation["affiliatestitle"], "language" => $language]);
             }
         }
-        public function input($input, $type = "string")
+        public function input($input, string $type = "string")
         {
+            if ($input === null) {
+                return $type === "array" ? [] : "";
+            }
+            
             if ($type === "int" || is_numeric($input)) {
                 return intval($input);
             }
@@ -671,12 +675,12 @@ if (!class_exists("adminiTheme")) {
                     if (is_array($value)) {
                         $newInput[$i] = $this->input($value, "array");
                     } else {
-                        $newInput[$i] = filter_var($value, FILTER_SANITIZE_STRING);
+                        $newInput[$i] = htmlspecialchars(strip_tags($value), ENT_QUOTES, 'UTF-8');
                     }
                 }
                 return $newInput;
             } else {
-                return filter_var($input, FILTER_SANITIZE_STRING);
+                return htmlspecialchars(strip_tags($input), ENT_QUOTES, 'UTF-8');
             }
         }
     }

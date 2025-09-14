@@ -317,7 +317,7 @@ function generatePinCode($clientid = 0, $length = 5)
     $numbers = join("", $matches[0]);
     return substr($numbers, 0, $length);
 }
-function customPinCodeMessage($userid)
+function custompincodemessage($userid)
 {
     $dbdatass = Illuminate\Database\Capsule\Manager::table("coodiv__control__general__settings")->where("id", "1")->select("id", "customerspin")->get();
     if (!empty($dbdatass)) {
@@ -399,8 +399,8 @@ function coodiv_homepage_options_settings($vars)
 }
 function frontlisencecheck($vars)
 {
-    $licenseresult = mysql_query("select * from coodiv__control__panel__license where itemid= '52246062'");
-    $licenseactivated = mysql_num_rows($licenseresult) ? true : false;
+    $licenseresult = Illuminate\Database\Capsule\Manager::table("coodiv__control__panel__license")->where("itemid", "52246062")->get();
+    $licenseactivated = $licenseresult->count() > 0;
     if ($licenseactivated) {
     } else {
         echo "<div style=\"position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 99999;background: #fff;text-align: center;align-items: center;justify-content: center;display: flex;gap: 5px;flex-direction: column;\">\n            <h6 style=\"font-size: 35px;font-weight: bold;font-family: system-ui;margin: 0;\">Thank you for using AdminiTheme</h6>\n            <p style=\"font-size: 15px;font-weight: 400;font-family: system-ui;\">In order to remove this message, you need to verify your license from the AdminiTheme Control Panel in your admin panel, or contact the <a href=\"https://coodiv.net/support\" target=\"_blanc\">Coodiv support team</a></p>\n          </div>";
