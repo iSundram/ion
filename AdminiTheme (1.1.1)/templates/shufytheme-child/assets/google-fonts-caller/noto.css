@@ -1,0 +1,16 @@
+:root{
+    --font-heading-rtl:"Noto Naskh Arabic",sans-serif;
+    --font-body-rtl:"Noto Naskh Arabic",sans-serif;
+}
+:root {
+    --font-heading: "Noto Naskh Arabic",sans-serif;
+    --font-body: "Noto Naskh Arabic",sans-serif;
+}
+button, input, select, textarea, h1, h2, h3, h4, h5, h6, body, body.body-style-2, .reseller-hosting-plan-title, .reseller-hosting-plan-price span, .reseller-hosting-plan-list li, .reseller-hosting-plan-order a,
+.dark-ressler-plan.reseller-hosting-plan-pack .reseller-hosting-plan-price a, .our-latest-news-box p, .discount-box-homepage, body.body-style-2 .coodiv-header .dropdown .profile-notification,
+.notification-slider, .custom-login-page-v2, body.body-style-2 .side-bar-header-lined-drop-down .dropdown-menu, body.body-style-2 .invoices-elements-tringo, body.body-style-2 .client-home-panels .panel-default,
+.dataTables_wrapper, .domains-dotoday, .domain-previw-box, .kc-bg-box-container .col-sm-12, .kc-bg-box-container .kbarticles, .article-content, #order-standard_cart .domain-pricing .row-table-tld-pricing,
+#order-standard_cart .domain-pricing, .domain-promo-box, #DomainSearchResults, .domainsaddionsbox, #order-standard_cart .order-summary, #order-standard_cart .view-cart-items.coodiv-version .item,
+#order-standard_cart .sub-heading span, #order-standard_cart .sub-heading-borderless span,#order-standard_cart .domain-selection-options .option  {
+    font-family: 'Noto Naskh Arabic', sans-serif !important;	
+}

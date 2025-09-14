@@ -1,0 +1,1 @@
+{if file_exists("templates/$template/includes/theme-core/overwrites/loader-minimalist.tpl")}{include file="{$template}/includes/theme-core/overwrites/loader-minimalist.tpl"}{else}<div class="minimalist__loader__spiner"></div>{/if}     

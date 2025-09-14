@@ -1,0 +1,8 @@
+#ShufyTheme child theme Configuration File
+
+name: "shufytheme-child"
+author: "Coodiv"
+config:
+  parent: shufytheme
+
+

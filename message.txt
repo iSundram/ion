@@ -1,1 +1,0 @@
-extract ioncube_loaders_lin_x86-64.zip and understand how it works , after understanding make decoder of ioncube with decoding accuracy of 100% don't only just claim , do and make. and at last decode hooks.php and analyse it is that the decoded?

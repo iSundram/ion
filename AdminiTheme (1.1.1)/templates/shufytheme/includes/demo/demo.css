@@ -1,0 +1,238 @@
+/*------------------------------------------------------------------
+ * Author: coodiv (nedjai mohamed) (nbames.mohamed@gmail.com)
+ * Author URI: https://coodiv.net/
+ * Author URI: https://themeforest.net/user/coodiv
+ * CSS File Version: 1.0.0
+ * Love Our work & support team?  Buy us a coffee! https://ko-fi.com/coodiv
+ * Copyright 2024 coodiv.
+ -------------------------------------------------------------------*/
+
+.shuffytheme__demo__sidebar__wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    transition: all 0.2s;
+    transform: translateX(280px);
+    width: 280px;
+    box-shadow: none;
+}
+@media only screen and (min-width: 767px) {
+	.shuffytheme__demo__sidebar__wrapper:not(.demo__sidebar__open):hover {
+		box-shadow: 0 12px 32px 6px rgba(0, 0, 0, .06), 0 16px 72px 8px rgba(0, 0, 0, .08);
+		transform: translateX(260px);
+	}
+}
+.shuffytheme__demo__sidebar__wrapper.demo__sidebar__open {
+    transform: translateX(0);
+	box-shadow: 0 12px 32px 6px rgba(0, 0, 0, .06), 0 16px 72px 8px rgba(0, 0, 0, .08);
+}
+
+.shuffytheme__demo__sidebar__wrapper #shuffytheme__demo__sidebar__toggler{
+    background: #fff;
+    cursor: pointer;
+    width: 98px;
+    position: absolute;
+    height: 98px;
+    top: 290px;
+    border-radius: 8px 0 0 8px;
+    padding: 8px 18px 8px 18px;
+    display: flex;
+    box-shadow: 0 12px 32px 6px rgba(0, 0, 0, .06), 0 16px 72px 8px rgba(0, 0, 0, .08);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: -98px;
+    z-index: -1;
+}
+.shuffytheme__demo__sidebar__wrapper #shuffytheme__demo__sidebar__toggler i{
+    font-size: 30px;
+    color: var(--btn-primary-bg);
+    margin-bottom: 7px;
+}
+.shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items{
+    border-left: 2px solid var(--border-color-light);
+    background: #fff;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+	padding-bottom: 60px;
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+body:not(.authorization__page) .shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items{
+    padding-top: calc(var(--header-default-height) + 25px);
+}
+.sidebardemo__custom__radioinput {
+	display: none;
+}
+.sidebardemo__custom__radio {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    background: #333;
+    margin: 5px;
+}
+.sidebardemo__custom__radio .inner__dot {
+    border-radius: 8px;
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: -4px;
+    bottom: -4px;
+    border: 1px solid;
+    border-color: #c6d1d6;
+}
+body:not(.theme-style-two,.theme-style-three,.theme-style-four) .sidebardemo__custom__radio.blue .inner__dot {
+	border: 2px solid;
+	border-color: #0cbcd3;
+}
+body.theme-style-two .sidebardemo__custom__radio.greenscheme .inner__dot {
+	border: 2px solid;
+	border-color: #6aa298;
+}
+body.theme-style-three .sidebardemo__custom__radio.purplescheme .inner__dot {
+	border: 2px solid;
+	border-color: #7d598f;
+}
+body.theme-style-four .sidebardemo__custom__radio.redscheme .inner__dot {
+	border: 2px solid;
+	border-color: #ff6a78;
+}
+.sidebardemo__custom__radio.bluescheme {
+    background: linear-gradient(45deg, #0cbcd3 0%, #0ca5ba 100%);
+}
+.sidebardemo__custom__radio.greenscheme {
+    background: linear-gradient(45deg, #6aa298 0%, #549085 100%);
+}
+.sidebardemo__custom__radio.purplescheme {
+	background: linear-gradient(45deg, #7d598f 0%, #603f70 100%);
+}
+.sidebardemo__custom__radio.redscheme {
+    background: linear-gradient(45deg, #ff6a78 0%, #cc4551 100%);
+}
+.sidebardemo__custom__radio.bluescheme:hover .inner__dot {
+	border-color: #0cbcd3;
+}
+body:not(.theme-style-two,.theme-style-three,.theme-style-four) .sidebardemo__custom__radioinput:checked + .sidebardemo__custom__radio.bluescheme .inner__dot {
+	border: 2px solid;
+	border-color: #0cbcd3;
+}
+.sidebardemo__custom__radio.greenscheme:hover .inner__dot,
+.sidebardemo__custom__radioinput:checked + .sidebardemo__custom__radio.greenscheme .inner__dot {
+	border-color: #6aa298;
+}
+.sidebardemo__custom__radio.purplescheme:hover .inner__dot,
+.sidebardemo__custom__radioinput:checked + .sidebardemo__custom__radio.purplescheme .inner__dot {
+	border-color: #7d598f;
+}
+.sidebardemo__custom__radio.redscheme:hover .inner__dot,
+.sidebardemo__custom__radioinput:checked + .sidebardemo__custom__radio.redscheme .inner__dot {
+	border-color: #ff6a78;
+}
+@media (min-width: 768px) {
+	body.header__top__logo header.header .top__header__website__identity {
+		display: flex !important;
+	}
+}
+@media (min-width: 768px) {
+	body:not(.authorization__page).horizontal__sidebar .shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items {
+		padding-top: calc(var(--header-default-height) + var(--horizontal-sidebar-default-height) + 25px);
+	}
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.shuffytheme__demo__sidebar__items__section .iradio_square-blue {
+    border-radius: 20px;
+    margin-right: 6px;
+    background-image: none !important;
+    background-color: #E7E9ED;
+    transition: all 0.2s;
+    line-height: 1;
+    width: 19px;
+    height: 19px;
+}
+.shuffytheme__demo__sidebar__items__section .iradio_square-blue.checked {
+    background-color: var(--background-4);
+}
+.shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items::-webkit-scrollbar{
+    width: 4px;
+    background: #f5f7f9;
+    padding: 4px;
+    border-radius: 20px;
+}
+.shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items::-webkit-scrollbar-thumb {
+    background-color: rgb(165 183 198 / 26%);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+.shuffytheme__demo__sidebar__wrapper .shuffytheme__demo__sidebar__items::-webkit-scrollbar-track{
+    background: transparent;
+}
+#demosettingsresetButton {
+	position: fixed;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    bottom: 20px;
+}
+#demosettingsresetButton.loading {
+	color: transparent !important;
+}
+#demosettingsresetButton.loading:after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotationloader 1s linear infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media only screen and (max-width: 767px) {
+	.shuffytheme__demo__sidebar__wrapper #shuffytheme__demo__sidebar__toggler {
+		width: 75px;
+		height: 75px;
+		left: -75px;
+	}
+	.shuffytheme__demo__sidebar__wrapper #shuffytheme__demo__sidebar__toggler i {
+		font-size: 20px;
+	}
+}
+
+body.rtl .shuffytheme__demo__sidebar__wrapper {
+    right: auto;
+    left: 0;
+    transform: translateX(-280px);
+}
+body.rtl .shuffytheme__demo__sidebar__wrapper #shuffytheme__demo__sidebar__toggler {
+    border-radius: 0 8px 8px 0;
+    right: -98px;
+    left: auto;
+}
+@media only screen and (min-width: 767px) {
+    body.rtl .shuffytheme__demo__sidebar__wrapper:not(.demo__sidebar__open):hover {
+        transform: translateX(-260px);
+    }
+}
+body.rtl .shuffytheme__demo__sidebar__wrapper.demo__sidebar__open {
+    transform: translateX(0);
+}
+body.rtl .shuffytheme__demo__sidebar__items__section .iradio_square-blue {
+    margin-right: 0;
+    margin-left: 6px;
+}
