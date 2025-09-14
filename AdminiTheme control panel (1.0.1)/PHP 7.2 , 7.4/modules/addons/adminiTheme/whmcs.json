@@ -1,0 +1,32 @@
+{
+    "schema": "1.0.0",
+    "type": "whmcs-addons",
+    "name": "adminiTheme",
+    "license": "Commercial",
+    "category": "addon",
+    "description": {
+        "name": "AdminiTheme Control Panel",
+        "tagline": "Configure your AdminiTheme using this control panel.",
+        "long": "Professional WHMCS administration theme control panel with convenient options to set up your theme main navigation and styling options.",
+        "features": [
+            "Provide admin facing user interfaces",
+            "Utilize hook functionality within WHMCS"
+        ]
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https:\/\/www.coodiv.net\/", 
+        "learn_more": "https:\/\/www.coodiv.net\/", 
+        "email": "support@coodiv.net", 
+        "support_url": "https:\/\/coodiv.net\/support",
+        "docs_url": "https:\/\/demo.coodiv.net\/adminitheme-modules\/documentation\/index.html"
+    },
+    "authors": [
+        {
+            "name": "coodiv team (nedjai mohamed)",
+            "homepage": "https:\/\/www.coodiv.net\/"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+WHMCS version 8.10.1
+Theme current version 1.1.1
+Orderform current version 1.1.1
+Addon module version 1.0.1
+
+Check the theme description or the documentation file for more information about the current version and updates to the changelog.

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/favicon.png" rel="icon" />
+<title>Documentation | AdminiTheme</title>
+<meta name="description" content="AdminiTheme, The Ultimate WHMCS Theme for Your Hosting Business" />
+<meta property="og:site_name" content="AdminiTheme" />
+<meta property="og:url" content="https://coodiv.net" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ShufyTheme: The Ultimate WHMCS Theme for Your Hosting Business" />
+<meta name="author" content="coodiv.net (nedjai mohamed)" />
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/fonts/sofia-pro/typographie.css" />
+<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<div id="main-wrapper"> 
+  <header id="header" class="sticky-top"> 
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+        <a class="logo ml-md-3" href="index.html" title="emyui Template"> 
+			<svg class="main__shufy__theme__logo" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 364.66 171.03">
+				<g class="logo__path">
+					<path class="shufy__theme__logo__icon__two" d="M110.9,97.4c0,14.8-0.1,29.6,0,44.4c0,2.7-0.7,4.1-3.3,5.2c-5,2-9.7,4.5-14.3,7.3c-3.4,2.1-2.5-0.5-2.6-2  c-0.1-9.5-0.2-19-0.3-28.4c-0.1-12.1-0.4-24.1-0.3-36.2c0-7.1-4.5-10.3-9.5-13.2C60.4,63,40.2,51.5,19.9,40c-1.4-0.7-2.1-2.2-2-3.7  c0.1-7.7-0.3-15.4,0.1-23.1C18.7,2.8,28.8-3.7,39.3,2.3c21.2,12.1,42.4,24.4,63.6,36.5c5.6,3.2,8,7.8,8,14.2  C110.9,67.8,110.9,82.6,110.9,97.4L110.9,97.4z"/>
+					<path class="shufy__theme__logo__icon__one" d="M78.8,104c0,2,0,4,0,6s0.2,3.3-2.5,1.7c-8.7-5.3-17.6-10.2-26.4-15.4S32.3,85.9,23.5,80.7  c-2.2-1.3-3.3-0.8-3.6,1.9c-0.8,7.5-0.1,8.4,8.2,12.9c14.7,8,29.3,16.3,44.1,24.2c5.3,2.8,6.6,7.5,6.6,12.8c0.1,8,0,16.1-0.1,24.2  c-0.1,7.6-2.9,11.7-9.9,14c-3.6,1.2-6.9-1.1-9.7-2.9C41.5,157.1,24,146.2,6.5,135.3c-4.2-2.6-6.7-6.4-6.4-11.9  c0.2-3.4,0.1-6.9,0-10.3c-0.1-2.5,0.2-3.6,2.9-2c9.1,5.6,18.3,11,27.4,16.5c8.6,5.2,17.1,10.3,25.6,15.6c2,1.2,2.6,1,2.5-1.3v-0.4  c0.3-8.5,0.3-8.6-7.3-12.9c-14.7-8.3-29.2-17.1-44.1-24.8c-5.8-3-7.5-6.5-7.1-12.9C0.6,82.3,0.3,73.6,0,65  c-0.2-6.7,3.8-11.6,10.7-13.1c2.7-0.6,5,0.8,7.3,2.1c17.7,10.2,35.3,20.4,53,30.5c5.3,3,7.6,7.8,7.8,13.8  C78.9,100.2,78.8,102.1,78.8,104L78.8,104z"/>
+				</g>
+				<path class="text__logo shufy__theme__logo__text" d="M138.7,83.8c1.8,2.1,3.8,3.9,6.2,5.3c1.8,1.1,3.9,1.7,6.1,1.8c1.7,0.1,3.3-0.5,4.6-1.5c1.2-0.9,1.8-2.3,1.8-3.8  c0.1-1.5-0.5-2.9-1.6-4c-1-0.9-3.4-1.9-7.1-2.9c-5-1.3-8.6-3.1-10.7-5.3c-2.1-2.2-3.1-5.2-3.1-9c-0.1-4.5,1.7-8.9,4.9-12  c3.3-3.1,7.6-4.7,12.8-4.7c2.7,0,5.4,0.4,8.1,1.1c2.6,0.8,5,1.9,7.2,3.5l-4.4,10.1c-1.5-1.3-3.1-2.3-4.9-3.1c-1.6-0.7-3.3-1-5-1  c-1.5-0.1-2.9,0.4-4.1,1.2c-1,0.7-1.6,1.9-1.6,3.1c0,1.2,0.5,2.3,1.4,3.1c1.6,1.1,3.4,1.8,5.4,2.2l0.6,0.2c5.7,1.5,9.5,3.2,11.3,5.1  c1.2,1.3,2.2,2.9,2.8,4.5c0.7,1.9,1,3.9,1,5.9c0,5.5-1.8,9.8-5.4,13.2c-3.6,3.3-8.4,5-14.3,5c-3.4,0-6.7-0.6-9.8-1.8  c-3.2-1.4-6-3.3-8.5-5.7L138.7,83.8z M176.4,100.5V49h14v20h18.7V49h14.1v51.5h-14v-21h-18.7v21H176.4z M232,49h14v25  c0,2.6,0.1,5.3,0.3,7.9c0.1,1.4,0.5,2.7,1,4c0.5,1.3,1.5,2.4,2.8,3c1.5,0.7,3.2,1.1,4.9,1c1.7,0.1,3.4-0.3,4.9-1  c1.3-0.6,2.3-1.7,2.8-3c0.5-1.3,0.8-2.6,1-4c0.2-2.6,0.3-5.3,0.3-7.9V49h14v27.2c0,5.7-0.3,9.8-1,12.5c-0.6,2.5-1.8,4.9-3.5,6.9  c-1.9,2.2-4.4,3.8-7.2,4.7c-7.3,2.1-15.1,2.1-22.4,0c-2.8-0.9-5.3-2.5-7.3-4.7c-1.6-2-2.8-4.4-3.4-6.9c-0.7-2.7-1-6.8-1-12.5V49H232  z M286.7,100.5V49h31.5v11.2h-17.9v9h16.8v11h-16.8v20.2H286.7z M333.2,100.5V77l-18-28h16.1l6.9,13.3c0.1,0.1,0.1,0.3,0.2,0.4  c0.7,1.3,1.2,2.6,1.5,4c0.3-1.3,0.8-2.6,1.5-3.8c0.2-0.3,0.2-0.4,0.3-0.5l6.8-13.2h16.1l-18,28v23.5L333.2,100.5z M144.2,115.3  h-11.3v-2.4h25.2v2.4h-11.3v31.2h-2.6L144.2,115.3z M164.3,111.1v15.4c1.5-3,4.6-4.8,7.9-4.6c3.4,0,8.1,1.7,8.1,9.3v15.3h-2.4v-14.8  c0-4.8-2.2-7.4-6.1-7.4c-4.8,0-7.5,2.9-7.5,8.8v13.4h-2.4v-35.4H164.3z M188.8,134.8c0,6.2,3.2,10,7.8,10s6-2.5,6.9-4.5h2.5  c-1,3.2-3.6,6.8-9.5,6.8c-7.3,0-10.1-6.3-10.1-12.4c0-6.9,3.4-12.8,10.4-12.8c7.4,0,9.7,6.4,9.7,10.9c0,0.7,0,1.3,0,2H188.8z   M204,132.7c0-4.8-2.6-8.5-7.4-8.5c-4.9,0-7.2,3.5-7.7,8.5H204z M212.3,128.7c0-2.1,0-4.3,0-6.2h2.4c0,0.8,0.1,2.9,0.1,4.3  c1.1-3,4-4.9,7.2-4.9c3.4,0,6,1.7,7,4.8c1.4-3,4.5-4.9,7.8-4.8c3.7,0,7.5,2.1,7.5,8.8v15.8h-2.5V131c0-3.2-1.1-6.7-5.6-6.7  c-4.6,0-6.8,3.8-6.8,8.4v13.8h-2.4v-15.5c0-3.5-1.1-6.8-5.5-6.8c-4.7,0-6.9,4.1-6.9,9v13.2h-2.4L212.3,128.7z M252.6,134.8  c0,6.2,3.2,10,7.8,10c4.6,0,6-2.5,6.9-4.5h2.4c-1,3.2-3.5,6.8-9.5,6.8c-7.3,0-10.1-6.3-10.1-12.4c0-6.9,3.4-12.8,10.4-12.8  c7.4,0,9.8,6.4,9.8,10.9c0,0.7,0,1.3,0,2H252.6z M267.8,132.7c0-4.8-2.6-8.5-7.3-8.5c-4.9,0-7.2,3.5-7.7,8.5H267.8z"/>
+			</svg>
+		</a> 
+		<span class="docs__version__badge ml-2">1.0.0</span> 
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+			<li><a target="_blank" href="https://themeforest.net/user/coodiv">Support</a></li>
+            <li><a target="_blank" href="https://coodiv.net/">Looking for customization?</a></li>
+			<li><a target="_blank" href="https://themeforest.net/user/coodiv/portfolio">Other Templates</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="https://www.instagram.com/coodivnet/" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="https://www.facebook.com/Coodiv/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div id="content" role="main">
+	<div class="idocs-navigation bg-dark docs-navigation-dark">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+		  <a class="nav-link" href="#getting_started">Introduction</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#beforegettingstarted">Before Getting Started</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_installation">Theme installation</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#requirements">Requirements</a></li>
+            <li class="nav-item"><a class="nav-link" href="#checkingversion">Checking version</a></li>
+            <li class="nav-item"><a class="nav-link" href="#downloadlatestvesion">Donwload Latest version</a></li>
+            <li class="nav-item"><a class="nav-link" href="#uploadtheme">Uploading the theme</a></li>
+            <li class="nav-item"><a class="nav-link" href="#installaddon">Installing the addon</a></li>
+            <li class="nav-item"><a class="nav-link" href="#activateatheme">Activating theme</a></li>
+            <li class="nav-item"><a class="nav-link" href="#activateaddon">Activating addon</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item"><a class="nav-link" href="#shufytheme_update">Updating</a></li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_configure_start">Configure your theme</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#logoidendity">Site Identity</a></li>
+            <li class="nav-item"><a class="nav-link" href="#genaralsettings">Genaral settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#seotools">SEO Tools</a></li>
+            <li class="nav-item"><a class="nav-link" href="#customcsscode">Custom CSS code</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_colormanager">Colors Manager</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#colorschemes">Color Schemes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#colorsvariables">Color Variables</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_typosettings">Typography settings</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#fontfamilysettings">Font Family settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#fontsizing">Font Sizing settings</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_layoutmanager">Layouts Manager</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#sidebarlayouts">Sidebar Layouts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sidebarposition">Sidebar position</a></li>
+            <li class="nav-item"><a class="nav-link" href="#logoposition">Logo position</a></li>
+          </ul>
+        </li>
+		
+        <li class="nav-item"><a class="nav-link" href="#shufytheme_sidebarsettings">Sidebar settings</a></li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_footermanager">Footer layouts</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#footerlayouts">Footer Layouts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#footersettings">Footer settings</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_homepagesettings">Homepage settings</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#homepagelayouts">Homepage layouts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#homepagefeatures">Homepage sections</a></li>
+          </ul>
+        </li>
+		
+        <li class="nav-item"><a class="nav-link" href="#mailchimp">Mailchimp Settings</a></li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#shufytheme_menumanager">Menu manager</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#createprimarymenu">Creating Menus</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menumanagerfeatures">Menus Features</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+		  <a class="nav-link" href="#addonfunctions">Shufytheme control panel</a>
+          <ul class="nav flex-column">
+		    <li class="nav-item"><a class="nav-link" href="#import">Import settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#export">Export settings</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reset">Export settings</a></li>
+          </ul>
+        </li>
+				
+		
+        <li class="nav-item"><a class="nav-link" href="#shufytheme_issues">Common issues</a></li>
+		
+        <li class="nav-item"><a class="nav-link" href="#shufytheme_support">Support</a></li>
+		<li class="nav-item"><a class="nav-link" href="#shufytheme_changelog">Changelog</a>
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-1.1">v1.1.1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-1-0">v1.1.0</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-0-1">v1.0.1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+      </ul>
+    </div>
+    
+    <div class="idocs-content">
+      <div class="container"> 
+        
+		<section id="getting_started">
+			<h2 class="mb-0 font-weight-600">ShufyTheme WHMCS Documentation file</h2>
+			<h5>By <a target="_blank" href="https://coodiv.net/">coodiv</a> team</h5>
+			<h4 class="mb-1 mt-5 font-weight-600">Introduction</h4>
+			<p>
+				It became evident that there exists a considerable monopoly within the WHMCS themes and add-ons marketplace.<br>
+				We observed that numerous WHMCS users are encountering challenges when seeking an appropriate theme that aligns with their brand identity.<br>
+				In response to this pressing need, we embarked on the development journey of ShufyTheme.<br>
+				ShufyTheme stands out as one of the most comprehensive and user-friendly WHMCS themes available on the market today. Our aim with ShufyTheme is to provide WHMCS users with a seamless and visually appealing solution that not only meets but exceeds their expectations. By incorporating cutting-edge design elements and robust functionality, ShufyTheme aims to revolutionize the WHMCS user experience, empowering businesses to showcase their brands effectively and effortlessly.
+			</p>
+			<div id="beforegettingstarted">
+				<h4 class="mb-1 mt-5 font-weight-600">Before Getting Started</h4>
+				<p>This documentation is designed to assist you with every step of the installation and customization process. Please carefully review the documentation to gain a thorough understanding of how this theme operates and how to customize it effectively.</p>
+				<p>We strongly recommend that you familiarize yourself with this documentation. Investing just half an hour in reading the manual can save you a significant amount of time and prevent unnecessary questions with obvious answers.</p>
+				<br>
+				<p class="alert alert-info">If you have any questions that are not covered in this help file, please don't hesitate to contact us via email through <a target="_blank" href="https://themeforest.net/user/coodiv">The Item Support Page</a> <br> or reach out to our <a target="_blank" href="https://coodiv.net/">dedicated support</a> team for assistance.</p>
+			</div>
+		</section>
+       
+	   
+		<hr class="divider">
+		
+		
+        <section id="shufytheme_installation">
+          <h2 class="font-weight-600 mb-1">Installation</h2>
+          <p>This guide will lead you step-by-step through the process of <b>installing Shufytheme</b> on your server. We'll provide detailed instructions to ensure a smooth installation experience from start to finish.</p>
+          
+		  <div id="requirements">
+		  <h4 class="mb-1 font-weight-600 mt-5">1. ShufyTheme Requirements</h4>
+		  <ul>
+		  <li><strong>IonCube Loader:</strong> 10.x and later</li>
+		  <li><strong>PHP:</strong> Version 7.2 and later</li>
+		  <li><strong>WHMCS system:</strong> Before installing Shufytheme, you must install WHMCS.</li>
+		  </ul>
+		  </div>
+		  
+		  <div id="checkingversion">
+			  <h4 class="mb-1 font-weight-600 mt-4">2. Check your version</h4>
+			  <ol>
+			  <li><strong>Check your WHMCS version:</strong> Before starting the installation, you need to verify if ShufyTheme is compatible with your WHMCS version. </li>
+			  <li><strong>Prepare your Purchase Code:</strong> You need to obtain your Purchase Code from ThemeForest because we will need it during the installation process. Read <a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code">this article</a> if you're unsure how to get it.</li>
+			  </ol>
+		  </div>
+		  
+		  <div id="downloadlatestvesion">
+			  <h4 class="mb-1 font-weight-600 mt-4">3. Download the latest version of ShufyTheme</h4>
+			  <ol>
+			  <li>Log into your Envato Market account.</li>
+			  <li>Hover the mouse over your username at the top of the screen.</li>
+			  <li>Click ‘Downloads’ from the drop-down menu.</li>
+			  <li>Click 'Download' next to "ShufyTheme" icon to download the latest version of the theme.</li>
+			  </ol>
+		  </div>
+		  
+		  <div id="uploadtheme">
+			  <h4 class="mb-1 font-weight-600 mt-4">4. Upload ShufyTheme to your server</h4>
+			  <ol>
+			  <li>Extract the <code>shufytheme_package_themeforest_X.X.X</code> folder that has been downloaded from ThemeForst.</li>
+			  <li>Inside that folder you will find <code>Upload.zip</code> Folder</li>
+			  <li>Get your WHMCS system installation directory in <b>WHMCS admin area. Go to "Help" > "License Information" > "Valid Directory"</b>.</li>
+			  <li>Upload content of <code>Upload.zip</code> folder to using FTP server, to the directory where your WHMCS system is installed.</li>
+			  <li>Ensure that all files are uploaded correctly during the upload process, without encountering any errors.</li>
+			  </ol>
+		  </div>
+		  
+		  <div id="installaddon">
+			  <h4 class="mb-1 font-weight-600 mt-4">5. Install ShufyTheme Addon</h4>
+			  <ol>
+				<li>Login to your WHMCS admin area.</li>
+				<li>In the top right corner, click on <code>System Settings</code> then select <code>Addon Modules</code>.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_1.webp"><img class="img-fluid border" src="assets/images/screens/install_1.webp" alt=""></a>
+				</li>
+				<li>Activate <code>Shufy Theme Control Panel by coodiv</code> addon.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_2.webp"><img class="img-fluid border" src="assets/images/screens/install_2.webp" alt=""></a>
+				</li>
+				<li>Click the <code>Configure</code> button, then select the admin role groups to grant access according to your requirements, and finally, save your changes.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_3.webp"><img class="img-fluid border" src="assets/images/screens/install_3.webp" alt=""></a>
+				</li>
+			  </ol>
+		  </div>
+		  
+		  <div id="activateatheme">
+			  <h4 class="mb-1 font-weight-600 mt-4">6. Activate ShufyTheme Theme and orderform template</h4>
+			  <ol>
+				<li>In the top right corner, click on <code>System Settings</code> then select <code>General Settings</code>.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_theme_1.webp"><img class="img-fluid border" src="assets/images/screens/install_theme_1.webp" alt=""></a>
+				</li>
+				
+				<li>In General tab select <code>ShufyTheme</code> from System Theme dropdown and click on Save Changes.  
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_theme_2.webp"><img class="img-fluid border" src="assets/images/screens/install_theme_2.webp" alt=""></a>
+				</li>
+				
+				<li>In Ordering tab select <code>Shyfytheme Cart</code> Default Order Form Template and click on Save Changes.  
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/install_theme_3.webp"><img class="img-fluid border" src="assets/images/screens/install_theme_3.webp" alt=""></a>
+				</li>
+			  </ol>
+		  </div>
+		  
+		  <div id="activateaddon">
+			  <h4 class="mb-1 font-weight-600 mt-4">7. Activate ShufyTheme Addon</h4>
+			  <ol>
+				<li>Go to <code>Addons</code> then click <code>Shufy Theme Control Panel by coodiv</code> in the navigation menu of your WHMCS admin area.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/active_addon_1.webp"><img class="img-fluid border" src="assets/images/screens/active_addon_1.webp" alt=""></a>
+				</li>
+				<li>Entre your <code>Purchase Code</code> then click <code>Verify Purchase</code>. Read <a target="_blank" href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code">this article</a> if you're unsure how to get the Purchase Code.
+				<br>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/active_addon_2.webp"><img class="img-fluid border" src="assets/images/screens/active_addon_2.webp" alt=""></a>
+				</li>
+			  </ol>
+		  </div>
+        </section>
+        
+		<hr class="divider">
+		
+		<section id="shufytheme_update">
+          <h2 class="font-weight-600 mb-1">Updating ShufyTheme</h2>
+          <p>In this guide, you will learn how to effectively update <code>ShufyTheme</code>. We will provide a step-by-step walkthrough of the entire update process.</p>
+          
+		  <h4 class="mb-1 font-weight-600 mt-5">1. Download the latest vesion </h4>
+		  <ul>
+		  <li>Log into your Envato Market account.</li>
+		  <li>Hover the mouse over your username at the top of the screen.</li>
+		  <li>Click ‘Downloads’ from the drop-down menu.</li>
+		  <li>Click 'Download' next to "ShufyTheme" icon to download the latest version of the theme.</li>
+		  </ul>
+		  
+		  
+		  <h4 class="mb-1 font-weight-600 mt-4">2. Upload ShufyTheme update files to your server</h4>
+		  <ol>
+			  <li>Ensure that you save a backup from your theme, which you would like to update.</li>
+			  <li>Use the right folder to update <code>ShufyTheme</code> from the downloaded package from ThemeForest, ex: you are using 8.9 and you want to update to 8.10.1, you just need to use the content of update from 8.9 to 8.10.1 folder</li>
+			  
+		  </ol>
+		  
+		  <h4 class="mb-1 font-weight-600 mt-4">3. Updating ShufyTheme Control Panel by coodiv</h4>
+		  <ol>
+			  <li>Ensure that you save a backup from your settings, Read how to <a target="_blank" href="#">export and import</a> options </li>
+			  <li>Upload the new <code>ShufyTheme</code> to <code>modules\addons</code> path</li>
+		  </ol>
+		  
+		  <h4 class="mb-1 font-weight-600 mt-4">4. Clear Cache</h4>
+		  <ol>
+			  <li>Clear your browser and server cache <b>for example Cloudflare</b></li>
+			  <li>Clear the WHMCS template cache in: <b>Utilities > System > System Cleanup > “Go” > “Empty Template Cache”</b>.</li>
+		  </ol>
+		  
+		</section>
+			
+
+		<hr class="divider">
+
+		
+		<section id="shufytheme_configure_start">
+          <h2 class="font-weight-600 mb-1">Configure your theme</h2>
+          <p>We've elevated the WHMCS option panel with the ShufyTheme Control Panel, making theme configuration easier than ever before. With our intuitive control panel, you can effortlessly customize various aspects of your theme. From editing colors, layouts, menus, footer and sidebar layouts, login and register layouts, to SEO management and typography control, ShufyTheme offers an extensive array of customization options to suit your needs.</p>
+			
+		  <div id="logoidendity">
+			  <h4 class="mb-1 font-weight-600 mt-5">1. Logo & Site Identity</h4>
+			  <p>You can use the default Shufytheme logo, add your custom logo link, or even if you don't have a logo, you can still use the text logo option.</p>
+			  
+			  <ol>
+				  <li><b>Use Site Name as Logo (text)</b> Check this option if you want to display your website name as a logo</li>
+				  <li><b>Custom text logo</b> Fill in this input to <b>Use Site Name as Logo</b> and use custom text instead of your original website name.</li>
+				  <li><b>Your default logo icon URL </b> Add your icon URL and most be a <b>1:1 aspect ratio</b></li>
+				  <li><b>Your default logo tagline</b> add your logo URL and most be <b>without icon</b></li>
+				  <li><b>Your Full logo link URL</b> add here your full logo URL</li>
+			  </ol>
+			  <a class="popup-img mt-3 d-block" href="assets/images/screens/general_settings.webp"><img class="img-fluid border" src="assets/images/screens/general_settings.webp" alt=""></a>
+		  </div>
+		  
+		  <div id="genaralsettings">
+			  <h4 class="mb-1 font-weight-600 mt-5">2. Genaral settings</h4>
+			  <p>You can use the default Shufytheme logo, add your custom logo link, or even if you don't have a logo, you can still use the text logo option.</p>
+			  
+			  <ol>
+				  <li><b>Customer Support PIN</b> With ShufyTheme you can use Customer Support PIN</li>
+				  <li><b>Delete notification when close it</b> You can hide all Customers notifications after close it for the first time</li>
+				  <li><b>Slider mode in product page</b> in these fields, you can configure the slider mode in the product page</li>
+				  <li><b>Gravatar</b> tick/enable this field to display Gravatar as profile picture for your customers.</li>
+				  <li><b>Header anoncements</b> tick/enable this field to display header anoncement slider</li>
+				  <li><b>Header dropdowns</b> You can choose if you want dropdowns to shows as a sidebar or a simple dropdown</li>
+				  <li><b>Marketconnect Bannaers</b> These fields are for displaying ShufyTheme MarketConnect banners</li>
+				  <li><b>Login & register page styles</b> You can choose from various login and register page styles</li>
+				  <li><b>Cookies Box settings</b> You can configure your cookies box position, contents and more</li>
+				  <li><b>Language dropdown placements</b> You can choose where you want to display your language dropdown</li>
+			  </ol>
+			  <a class="popup-img mt-3 d-block" href="assets/images/screens/general_settings_2.webp"><img class="img-fluid border" src="assets/images/screens/general_settings_2.webp" alt=""></a>
+		  </div>
+		  
+		  <div id="seotools">
+			  <h4 class="mb-1 font-weight-600 mt-5">3. SEO Tools</h4>
+			  <p>ShufyTheme is equipped with built-in SEO enhancements. With each new version, we endeavor to enhance the SEO capabilities of our products, ensuring your website not only looks great but also performs well in search engine rankings.</p>
+			  <ol>
+				  <li><b>Website Name</b> A name that Google may use for your homepage search results. This will default to the WHMCS site title if left blank.</li>
+				  <li><b>Website description</b> An alternate website description for your site.</li>
+				  <li><b>Organization Name</b> Add your Organization Name to this filed.</li>
+				  <li><b>Contact Type</b> Select Which Contact Type you are using in your website.</li>
+				  <li><b>Twitter username</b> Add your twitter username with @.</li>
+				  <li><b>Alternate Website Name</b> An alternate name for your site. This could be an acronym or shorter version of your website name.</li>
+				  <li><b>Website Type</b> Select which department are your website belongs to</li>
+				  <li><b>Organization Phone Number</b> Add your Organization Phone Number to this filed.</li>
+				  <li><b>Default open Graph Image</b> ADD Default open Graph Image URL for facebook and twitter links</li>
+				  <li><b>Website custom shortcut icon</b> Add your custom shortcut icon and sould be 1:1 and .ico link</li>
+			  </ol>
+			  <a class="popup-img mt-3 d-block" href="assets/images/screens/seo_tools.webp"><img class="img-fluid border" src="assets/images/screens/seo_tools.webp" alt=""></a>
+		  </div>
+		  
+		  <div id="customcsscode">
+			  <h4 class="mb-1 font-weight-600 mt-5">4. Custom CSS code</h4>
+			  <p>Empower your customization by effortlessly adding your <code>custom CSS code</code> via the ShufyTheme Control Panel, bypassing the necessity of editing any theme files.</p>
+			  <a class="popup-img mt-3 d-block" href="assets/images/screens/css_custom.webp"><img class="img-fluid border" src="assets/images/screens/css_custom.webp" alt=""></a>
+		  </div>
+		</section>
+		
+		
+		<hr class="divider">
+		
+		
+		<section id="shufytheme_colormanager">
+			<h2 class="font-weight-600 mb-1">Colors Manager</h2>
+			<p>Revamp your theme customization experience with a selection of <code>4 pre-made</code> styles and an extensive palette of over <code>160 color options</code> for each style. Absolutely no coding expertise required!</p>
+
+			<ol>
+				<li><b>4 Color Schemes :</b> Choose from 4 pre-made color schemes.</li>
+				<li><b>Colors options :</b> More than 160 options for each color scheme, totaling over 640 color options to manage.</li>
+			</ol>
+			
+			<div id="colorschemes">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Color Schemes</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/colors.webp"><img class="img-fluid border" src="assets/images/screens/colors.webp" alt=""></a>
+				<p>You can select from 4 pre-made color schemes. Feel free to choose a pre-made scheme or customize one to establish your brand colors. You can activate your chosen scheme by following these steps:</p>
+
+				<ol>
+					<li>Go to the <code>Shufy Theme Styles & colors settings</code> tab in Shufy Theme Control Panel.</li>
+					<li>Choose the <code>Color Scheme</code>, which you want to use, for example <b>Purple Theme Schemes</b>.</li>
+					<li>Click <code>Save and apply the style</code> at the bottom of the screen.</li>
+				</ol>
+			</div>
+			
+			<div id="colorsvariables">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Color Variables</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/colors_variables.webp"><img class="img-fluid border" src="assets/images/screens/colors_variables.webp" alt=""></a>
+				<p>If the pre-made color schemes don't match your brand, you can begin editing the color schemes of every theme element using the Custom Theme Color Schemes section. </p>
+
+				<ol>
+					<li><b>Backgrounds Colors</b> The default ShufyTheme Backgrounds schemes</li>
+					<li><b>Primary button colors</b> Primary button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>Primary Light button colors</b> Primary Light button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>Default button colors</b> Default button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>Primary outline button colors</b> Primary outline color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>primary outline white button colors</b> primary outline white button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>Primary outline light button colors</b> Primary outline light button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>light button colors</b> light button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>lighter button colors</b> Ligter button color schemes (background, colors, border, hover .. etc)</li>
+					<li><b>Texts Colors</b> Headings, Texts, Borders, Tags Colors & More ...</li>
+					<li><b>Sidebar colors Schemes</b> More than 15 color options for default Sidebar</li>
+					<li><b>Dark Sidebar colors Schemes</b> More than 15 color options for Dark Sidebar</li>
+					<li><b>Primary alerts, Badges & status colors</b> Edit the primary alerts, badge, status default background and colors</li>
+					<li><b>Secondary alerts, Badges & status colors</b> Edit the secondary alerts, badge, status default background and colors</li>
+					<li><b>Success alerts, Badges & status colors</b> Edit the success alerts, badge, status default background and colors</li>
+					<li><b>Danger alerts, Badges & status colors</b> Edit the danger alerts, badge, status default background and colors</li>
+					<li><b>Warning alerts, Badges & status colors</b> Edit the warning alerts, badge, status default background and colors</li>
+					<li><b>Info alerts, Badges & status colors</b> Edit the info alerts, badge, status default background and colors</li>
+					<li><b>Light alerts, Badges & status colors</b> Edit the light alerts, badge, status default background and colors</li>
+					<li><b>Dark alerts, Badges & status colors</b> Edit the dark alerts, badge, status default background and colors</li>
+				</ol>
+			</div>
+			
+
+		</section>
+		
+		
+		<hr class="divider">
+		
+		
+		<section id="shufytheme_typosettings">
+			<h2 class="font-weight-600 mb-1">Typography settings</h2>
+
+			<p>Shufytheme options panel gives you the power to choose from multiple Font Family and customize the font sizes on your website.</p>
+
+			<ol>
+				<li><b>Font Family settings :</b> Allows you to change "Font Family" used in Shufytheme without any cooding knowladge.</li>
+				<li><b>Font Sizing settings :</b> You have complete autonomy to adjust font sizes for both Desktop and Mobile screens.</li>
+			</ol>
+			
+			<div id="fontfamilysettings">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Font Family settings</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/typo.webp"><img class="img-fluid border" src="assets/images/screens/typo.webp" alt=""></a>
+				<p>In this section you can choose from a large variant of google font To use in your website</p>
+				<ol>
+					<li><b>Dafault Font Family</b> The default font family for your website</li>
+					<li><b>RTL Font Family</b> The RTL font family for your website</li>
+				</ol>
+			</div>
+			
+			
+			<div id="fontsizing">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Font Sizing settings</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/sezing.webp"><img class="img-fluid border" src="assets/images/screens/sezing.webp" alt=""></a>
+				<p>The ShufyTheme control panel gives you the ability to adjust font sizes for both Desktop and Mobile screens with over 22 options available.</p>
+				
+				<ol>
+					<li><b>Shufy Theme Font size 1</b> The default font size for <code>coodiv-text-1</code> class</li>
+					<li><b>Shufy Theme Font size 2</b> The default font size for <code>coodiv-text-1</code> class</li>
+					<li><b>Shufy Theme Font size 3</b> The default font size for <code>coodiv-text-3</code> class</li>
+					<li><b>Shufy Theme Font size 4</b> The default font size for <code>coodiv-text-4</code> class</li>
+					<li><b>Shufy Theme Font size 5</b> The default font size for <code>coodiv-text-5</code> class</li>
+					<li><b>Shufy Theme Font size 6</b> The default font size for <code>coodiv-text-6</code> class</li>
+					<li><b>Shufy Theme Font size 7</b> The default font size for <code>coodiv-text-7</code> class</li>
+					<li><b>Shufy Theme Font size 8</b> The default font size for <code>coodiv-text-8</code> class</li>
+					<li><b>Shufy Theme Font size 9</b> The default font size for <code>coodiv-text-9</code> class</li>
+					<li><b>Shufy Theme Font size 10</b> The default font size for <code>coodiv-text-10</code> class</li>
+					<li><b>Shufy Theme Font size 11</b> The default font size for <code>coodiv-text-11</code> class</li>
+					<li><b>Shufy Theme Font size 12</b> The default font size for <code>coodiv-text-12</code> class</li>
+					<li><b>Shufy Theme Font size 13</b> The default font size for <code>coodiv-text-13</code> class</li>
+					<li><b>H1</b> The default font size for <code>H1</code> tag</li>
+					<li><b>H2</b> The default font size for <code>H2</code> tag</li>
+					<li><b>H3</b> The default font size for <code>H3</code> tag</li>
+					<li><b>H4</b> The default font size for <code>H4</code> tag</li>
+					<li><b>H5</b> The default font size for <code>H5</code> tag</li>
+					<li><b>H6</b> The default font size for <code>H6</code> tag</li>
+					<li><b>P</b> The default font size for <code>P</code> tag</li>
+					<li><b>BUTTON</b> The default font size for <code>BUTTON</code> tag</li>
+					<li><b>SMALL BUTTON</b> The default font size for <code>SMALL BUTTON</code> tag</li>
+				</ol>
+			</div>
+
+
+		</section>
+		
+		
+		<hr class="divider">
+		
+		
+		<section id="shufytheme_layoutmanager">
+			<h2 class="font-weight-600 mb-1">Layouts Manager</h2>
+
+			<p>Effortlessly customize the appearance of your WHMCS client portal with over 17 Pre-Layouts for your theme. The Shufytheme Layout Manager functionality provides you with complete freedom to define various layouts for the sidebar and top header elements.</p>
+
+			<ol>
+				<li><b>Sidebar Layouts :</b> Easly change and customize your theme sidebar layout from 4 pre-made layouts.</li>
+				<li><b>Sidebar position :</b> Easly change and customize your theme sidebar position from 4 pre-made position.</li>
+				<li><b>Logo position :</b> Easly change your theme logo position from the sidebar to the top header.</li>
+			</ol>
+			
+			
+			<div id="sidebarlayouts">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Sidebar Layouts</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/layouts.webp"><img class="img-fluid border" src="assets/images/screens/layouts.webp" alt=""></a>
+				<p>Easly change and customize your theme sidebar layout with the Shufytheme Layout Manager from 4 pre-made layouts</p>
+				
+				<ol>
+					<li><b>Default Sidebar</b> Use the default style Shufytheme sidebar</li>
+					<li><b>Big icons sidebar</b> Use the Big icons style Shufytheme sidebar</li>
+					<li><b>Separated Default Sidebar</b> Use the default separated style Shufytheme sidebar </li>
+					<li><b>Separated Big icons Sidebar</b> Use the Big icons separated style Shufytheme sidebar </li>
+				</ol>
+			</div>
+			
+			<div id="sidebarposition">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Sidebar position</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/positions.webp"><img class="img-fluid border" src="assets/images/screens/positions.webp" alt=""></a>
+				<p>Easly change and customize your theme sidebar layout with the Shufytheme position Manager from 4 pre-made layouts</p>
+				
+				<ol>
+					<li><b>Left position</b> Use the left position Shufytheme sidebar</li>
+					<li><b>right position</b> Use the right position Shufytheme sidebar</li>
+					<li><b>Horizontal position</b> Use the horizontal position Shufytheme sidebar</li>
+					<li><b>Horizontal top position</b> Use the horizontal top position Shufytheme sidebar</li>
+				</ol>
+			</div>
+			
+			<div id="logoposition">
+				<h4 class="mb-1 font-weight-600 mt-5">3. Logo position</h4>
+				
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/logo_positions.webp"><img class="img-fluid border" src="assets/images/screens/logo_positions.webp" alt=""></a>
+				<p>Easly change your theme logo position from the sidebar to the top header with the Shufytheme layouts Manager</p>
+				
+				<ol>
+					<li><b>Sidebar Logo</b> Add your logo to ShufyTheme sidebar</li>
+					<li><b>Header Logo</b> Add your logo to ShufyTheme Top header</li>
+				</ol>
+			</div>
+		</section>
+		
+		
+		<hr class="divider">
+		<section id="shufytheme_sidebarsettings">
+			<h2 class="font-weight-600 mb-1">Sidebar settings</h2>
+			<p>The Shufytheme Sidebar settings functionality grants you complete freedom to customize the header and sidebar behavior, including boxed width, expanding, fixed positions, hover effects, and more.</p>
+			<ol>
+				<li><b>Dark Mode sidebar</b> with this option you can enable or disable the dark sidebar mode</li>
+				<li><b>collapsed sidebar by default</b> with this option you can collapsed the sidebar by default</li>
+				<li><b>Allow user to expand the sidebar when is collapsed</b> with this option you can enable or disable users to expand the sidebar</li>
+				<li><b>Allow user to collapse the sidebar when is expanded</b> with this option you can enable or disable users to collapse the sidebar</li>
+				<li><b>Fixed Top header</b> with this option you set fixed top header when scroll</li>
+				<li><b>Fixed horizontal sidebar</b> with this option you set fixed horizontal sidebar when scroll</li>
+				<li><b>Fixed Secondary & cart menu</b> with this option you set fixed Secondary & cart menu when scroll</li>
+				<li><b>Enabe show sidebar on hover</b> with this option you can enable or disable expending the sidebar on hover</li>
+				<li><b>Enabe show sidebar child on hover</b> with this option you can enable or disable opening the sidebar child when hover</li>
+				<li><b>Enable top header full screen width</b> with this option you can enable or disable boxed width for top header</li>
+				<li><b>Enable horizontal sidebar full screen width</b> with this option you can enable or disable boxed width for horizontal sidebar</li>
+			</ol>
+			<a class="popup-img mt-3 d-block" href="assets/images/screens/sidebar.webp"><img class="img-fluid border" src="assets/images/screens/sidebar.webp" alt=""></a>
+		</section>
+		
+		<hr class="divider">
+		
+		<section id="shufytheme_footermanager">
+			<h2 class="font-weight-600 mb-1">Footer layout Manager</h2>
+			<p>With the expansive capabilities of the Shufytheme options panel, you're presented with a selection of over 7 distinct footer layouts to choose from.</p>
+			<ol>
+				<li><b>7 footer layouts</b> Choose from 7 footer layouts to use on your theme </li>
+				<li><b>Footer settings</b> More footer settings like copyright, website logo, social icons ...etc</li>
+			</ol>
+			<div id="footerlayouts">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Footer Layouts</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/footer_layouts.webp"><img class="img-fluid border" src="assets/images/screens/footer_layouts.webp" alt=""></a>
+				<p>Choose from 7 footer layouts to establish the footer design that best suits your theme and brand.</p>
+				<ol>
+					<li><b>Footer layout 1</b> The footer layout 1 shows all of the footer features and elements</li>
+					<li><b>Footer layout 2</b> The footer layout 2 removes the footer side elements like logo and description</li>
+					<li><b>Footer layout 3</b> The footer layout 3 shows all of the footer features and elements with footer side on the right</li>
+					<li><b>Footer layout 4</b> The footer layout 4 removes the footer bottom bar</li>
+					<li><b>Footer layout 5</b> The footer layout 5 remove both of the bottom bar and footer side informations</li>
+					<li><b>Footer layout 6</b> The footer layout 6 shows all of the footer features and elements with footer side on the right and removes the footer bottom bar</li>
+					<li><b>Footer layout 7</b> The footer layout 7 show only the footer bottom bar</li>
+				</ol>
+			</div>
+			
+			<div id="footersettings">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Footer settings</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/footer_settings.webp"><img class="img-fluid border" src="assets/images/screens/footer_settings.webp" alt=""></a>
+				<p>Within the Shufytheme settings, you'll find a plethora of options to customize your footer to perfection. Navigate to the Footer Settings section, where you'll discover a treasure trove of options waiting to be tailored to your specific needs.</p>
+				<ol>
+					<li><b>Copyright</b> Display powered by coodiv in the copyright section</li>
+					<li><b>Website Logo</b> Display the website logo in footer</li>
+					<li><b>Description</b> footer site description</li>
+					<li><b>Social Icons</b> Display footer social icons</li>
+					<li><b>Company Adress</b> Display footer company adresse</li>
+					<li><b>Company Mobile Phone</b> Display footer company mobile phone</li>
+					<li><b>Company Email</b> Display footer company email</li>
+					<li><b>Custom Mobile number</b> Custom Footer support mobile number</li>
+					<li><b>Custom Email</b> Custom Footer support email</li>
+					<li><b>Company Adress</b> Custom company adress</li>
+				</ol>
+			</div>
+		
+		</section>
+		
+		<hr class="divider">
+		
+		<section id="shufytheme_homepagesettings">
+			<h2 class="font-weight-600 mb-1">Homepage settings</h2>
+			<p>The Shufytheme Homepage Settings offer a comprehensive suite of tools to tailor your website's front page to your precise specifications. Within this intuitive interface, you can effortlessly configure various elements to create a captivating and user-friendly homepage. From layout options to content customization, the Homepage Settings empower you to craft a dynamic and engaging entry point for your visitors.</p>
+			<ol>
+				<li><b>Homepage layouts</b> We are working on new layouts for shufytheme and should be ready soon </li>
+				<li><b>Homepage sections</b> You have the ability to edit and customize all the content, links, colors, and more within each section of the homepage.
+					<ul>
+						<li>Homepage featured services settings</li>
+						<li>Homepage featured plans settings</li>
+						<li>Homepage features boxes</li>
+						<li>Homepage Saving banner & subscribing</li>
+					</ul>
+				</li>
+				<li><b>MailChimp options</b> Set up your MailChimp mailing list subscription directly from the Shufytheme control panel.</li>
+			</ol>
+			
+			<div id="homepagelayouts">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Homepage layouts</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/homepagelayouts.webp"><img class="img-fluid border" src="assets/images/screens/homepagelayouts.webp" alt=""></a>
+				<p>You can select the homepage layouts and customize which sections you want to display or remove using the Homepage Layouts settings.</p>
+				<ol>
+					<li><b>Marketconnect Bannaers</b> Display Marketconnect Bannaers in Homepage</li>
+					<li><b>Marketconnect Bannaers nav</b> Display Marketconnect Bannaers nav in Homepage</li>
+					<li><b>Announcements</b> Display Announcements in the Homepage</li>
+				</ol>
+			</div>
+			
+			<div id="homepagefeatures">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Homepage featured services settings</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/homepagefeatures.webp"><img class="img-fluid border" src="assets/images/screens/homepagefeatures.webp" alt=""></a>
+				<p>In this section, you'll discover an array of settings dedicated to configuring the Featured Services section of your website. From titles and subtitles to pricing links and beyond, you have the ability to fine-tune various aspects to align with your branding and messaging. Whether you're highlighting key offerings, showcasing product features, or promoting services, these settings empower you to create a compelling and informative section that resonates with your audience.</p>
+			</div>
+			
+			
+			<div id="homepageplans">
+				<h4 class="mb-1 font-weight-600 mt-5">3. Homepage featured plans settings</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/homepageplans.webp"><img class="img-fluid border" src="assets/images/screens/homepageplans.webp" alt=""></a>
+				<p>Within this section, you'll find a comprehensive array of customization options tailored specifically for the Homepage Featured Plans section. From adjusting titles and subtitles to fine-tuning colors, links, and pricing details, you have full control over every aspect of this prominent section. Whether you're showcasing subscription tiers, service packages, or product offerings, these customizable settings enable you to create an impactful and visually appealing display that effectively communicates your value proposition to your audience.</p>
+			</div>
+			
+			
+			<div id="homepagefeatursbox">
+				<h4 class="mb-1 font-weight-600 mt-5">4. Homepage features boxes</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/homepageboxes.webp"><img class="img-fluid border" src="assets/images/screens/homepageboxes.webp" alt=""></a>
+				<p>Within this interface, you have the capability to edit and personalize the Homepage Features Boxes section according to your preferences. This includes the ability to incorporate your own icons, titles, descriptions, and URLs, providing a tailored and informative showcase of key features or services offered on your website. Whether you're highlighting product features, service offerings, or key benefits, these customizable options empower you to craft a visually engaging and informative section that resonates with your audience.</p>
+			</div>
+			
+			
+			<div id="homepagesavingbanner">
+				<h4 class="mb-1 font-weight-600 mt-5">5. Homepage Saving banner & subscribing</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/homepagebanner.webp"><img class="img-fluid border" src="assets/images/screens/homepagebanner.webp" alt=""></a>
+				<p>In this section, you have the opportunity to personalize the Homepage Saving banner & subscribing section to align with your branding and messaging. You can add custom links and text to the banner, tailoring it to promote specific offers or highlight key messages. Additionally, you can integrate your Mailchimp information to enable visitors to subscribe to your mailing list directly from this section, facilitating seamless engagement and communication with your audience. Whether you're promoting discounts, announcing special offers, or encouraging newsletter sign-ups, these customization options empower you to create a compelling and interactive section that drives user engagement and conversion.</p>
+			</div>
+			
+			<div id="mailchimp">
+				<h4 class="mb-1 font-weight-600 mt-5">6. Setup your Mailchimp subscription list</h4>
+				<ol>
+					<li><b>MailChimp API key</b> To find your API, follow these steps.</li>
+						<ol>
+							<li>Click your profile name to expand the Account Panel and choose <b>Account Settings</b></li>
+							<li>Click the Extras menu and <b>choose API keys</b>.</li>
+						</ol>
+					<li><b>MailChimp unique audience ID</b> To find your audience ID, follow these steps. 
+						<ol>
+							<li>Click Audience</li>
+							<li>Click All contacts</li>
+							<li>If you have more than one audience, click the Current audience drop-down and choose the one you want to work with.</li>
+							<li>Click the Settings drop-down and choose Audience name and defaults.</li>
+							<li>In the Audience ID section, you’ll see a string of letters and numbers. This is your audience ID.</li>
+						</ol>
+					</li>
+					<li><b>Mailchimp account data center</b> you will find the data center in you api key, your-api-key-<code>usX</code></li>
+				</ol>
+			</div>
+		</section>
+		
+		
+		<hr class="divider">
+		
+		
+		<section id="shufytheme_menumanager">
+			<h2 class="font-weight-600 mb-1">Menu manager</h2>
+			<p>With the Shufytheme Menu manager, the process of creating or editing menus for your WHMCS no longer requires complex WHMCS hooks. This intuitive tool offers convenient options to establish and customize your theme's primary and footer navigation effortlessly. Whether you're adding new menu items, rearranging existing ones, or adjusting navigation settings, ShufyTheme manager streamlines the entire process, empowering you to create a seamless and user-friendly navigation experience for your website visitors.</p>
+			
+			<ol>
+				<li><b>Primary Menu</b> You can easly create and edit Primary menus </li>
+				<li><b>Footer Menu</b> You can easly create and edit footer menus.</li>
+				<li><b>Expoloring Menu Features</b> Shufytheme Menu manager has many features included.
+					<ul>
+						<li>Target Blank option</li>
+						<li>WHMCS core url or custom url</li>
+						<li>Custom String title</li>
+						<li>Menu icon</li>
+						<li>Menu Item title translation</li>
+						<li>Dynamic fileds</li>
+							<ul>
+								<li>Total Products/Services</li>
+								<li>Active Products/Services</li>
+								<li>Total Domains</li>
+								<li>Active Domains</li>
+								<li>Due Invoices</li>
+								<li>Overdue Invoices</li>
+								<li>Active Tickets</li>
+								<li>Shopping Cart Items</li>
+							</ul>
+						<li>Menu order ID</li>
+						<li>Parent Menu</li>
+						<li>Display Rule</li>
+						<li>Additional classes</li>
+						<li>Additional ID</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<div id="createprimarymenu">
+				<h4 class="mb-1 font-weight-600 mt-5">1. How to create primary or footer Menu</h4>
+				<p>Within the menu management feature of Shufytheme, you are granted the seamless capability to not only create but also edit Primary menus with utmost ease and flexibility. This intuitive tool empowers you with a user-friendly interface and a plethora of customization options, allowing you to craft your website's primary navigation exactly as you envision it. Whether you're adding new menu items, rearranging their order, adjusting their styling, or fine-tuning their functionality, the Shufytheme Menu Manager simplifies the entire process, enabling you to create a coherent and user-friendly navigation experience for your website visitors. With Shufytheme, menu customization becomes a breeze, ensuring that your website's navigation aligns perfectly with your branding and enhances the overall user experience.</p>
+				
+				<ol>
+					<li>Open shufytheme control panel ---> menu manager tab ---> and click on create <code>New group</code>
+					<br>
+					<a class="popup-img mt-3 d-block" href="assets/images/screens/menu_step_1.webp"><img class="img-fluid border" src="assets/images/screens/menu_step_1.webp" alt=""></a>
+					</li>
+					<li>Give a name for menu group and set this menu as <code>Primary Menu</code> or <code>Footer menu</code> and click on <code>Add new group</code>
+					<br>
+					<a class="popup-img mt-3 d-block" href="assets/images/screens/menu_step_2.webp"><img class="img-fluid border" src="assets/images/screens/menu_step_2.webp" alt=""></a>
+					</li>
+					<li>After creating the menu group, click on <code>Manage the Menu</code> button</b>
+					<br>
+					<a class="popup-img mt-3 d-block" href="assets/images/screens/menu_step_3.webp"><img class="img-fluid border" src="assets/images/screens/menu_step_3.webp" alt=""></a>
+					</li>
+					<li>Here you can start creating menus items to the group by clicking on <code>Add new item</code> button</b>
+					<br>
+					<a class="popup-img mt-3 d-block" href="assets/images/screens/menu_step_4.webp"><img class="img-fluid border" src="assets/images/screens/menu_step_4.webp" alt=""></a>
+					</li>
+					<li>You can fill in information for your menu item, such as title, icon, link, etc. You can read more about menu item features <a href="#menumanagerfeatures">here</a></b>
+					<br>
+					<a class="popup-img mt-3 d-block" href="assets/images/screens/menu_step_5.webp"><img class="img-fluid border" src="assets/images/screens/menu_step_5.webp" alt=""></a>
+					</li>
+					
+				</ol>
+			</div>
+			
+			<div id="menumanagerfeatures">
+			<h4 class="mb-1 font-weight-600 mt-5">2. Expoloring Menu Additional Features</h4>
+			<p>Within Shufytheme's menu management system, you have a range of customizable options to optimize the functionality and appearance of your menus. These options include::</p>
+			
+			<ul>
+				<li><b>Target Blank option</b> Choose whether menu links open in a new tab or window, enhancing user experience and navigation flexibility.</li>
+				<li><b>WHMCS core URL or custom URL</b> Specify either a default WHMCS URL or a custom URL for menu items, tailoring navigation to your specific needs.</li>
+				<li><b>Custom String title</b> Provide unique, descriptive titles for menu items, ensuring clarity and relevance for your visitors.</li>
+				<li><b>Menu icon</b> Add visual cues to menu items with customizable icons, enhancing aesthetics and usability.</li>
+				<li><b>Menu Item title translation</b> Enable multilingual support by translating menu item titles into different languages, accommodating diverse audiences.</li>
+				<li>
+				<li>Dynamic fileds</li>
+				<ul>
+				<li><b>Total Products/Services</b> Showcase the total number of products or services available on your website, giving visitors an overview of your offerings.</li>
+				<li><b>Active Products/Services</b> Highlight the number of currently active products or services, signaling to visitors the breadth of your active offerings.</li>
+				<li><b>Total Domains</b> Display the total count of domains registered or managed through your platform, offering transparency into your domain services.</li>
+				<li><b>Active Domains</b> Show the number of domains that are currently active or in use, providing insight into the scale of your domain management services.</li>
+				<li><b>Due Invoices</b> Alert visitors to any invoices that are due for payment, ensuring timely attention to outstanding balances.</li>
+				<li><b>Overdue Invoices</b> Notify visitors of any invoices that are past their due date, encouraging prompt resolution of overdue payments.</li>
+				<li><b>Active Tickets</b> Display the number of active support tickets, indicating your commitment to addressing customer inquiries and issues.</li>
+				<li><b>Shopping Cart Items</b> Show the number of items currently in a visitor's shopping cart, offering a convenient reminder of their selected products or services.</li>
+				</ul>
+				</li>
+				<li><b>Menu order ID</b> Arrange menu items in a specific order by assigning order IDs, allowing for precise control over menu hierarchy.</li>
+				<li><b>Parent Menu</b> Organize menu items hierarchically by defining parent-child relationships, creating structured and intuitive navigation paths.</li>
+				<li><b>Display Rule</b> Set conditions for when menu items are displayed, such as based on user roles, always active, active for guest only, active for users only ...etc</li>
+				<li><b>Additional classes</b> Apply custom CSS classes to menu items, enabling further styling customization to match your website's design aesthetic.</li>
+				<li><b>Additional ID</b> Assign unique identifiers to menu items, facilitating advanced styling or scripting requirements for specific menu elements.</li>
+			</ul>
+			
+			<p>By incorporating these dynamic menu features, you can enrich the user experience, provide valuable information at a glance, and encourage visitor engagement with your website's offerings and services.</p>
+			</div>
+			
+		</section>
+		
+		<hr class="divider">
+		
+		<section id="addonfunctions">
+			<h2 class="font-weight-600 mb-1">Shufytheme control panel import, export and reset to default</h2>
+			<p>The "Shufytheme Control Panel" function within this WHMCS addon offers comprehensive management capabilities for theme configurations. With this tool, users can effortlessly import, export, and reset theme settings to default values, streamlining the customization process.</p>
+			<p>With these features, you can efficiently tailor your theme experience to meet their specific needs and preferences.</p>
+			<div id="import">
+				<h4 class="mb-1 font-weight-600 mt-5">1. Import settings</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/import.webp"><img class="img-fluid border" src="assets/images/screens/import.webp" alt=""></a>
+				<p>Seamlessly import pre-configured theme settings, simplifying setup and ensuring consistency across platforms.</p>
+			</div>
+			
+			<div id="export">
+				<h4 class="mb-1 font-weight-600 mt-5">2. Export settings</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/export.webp"><img class="img-fluid border" src="assets/images/screens/export.webp" alt=""></a>
+				<p>Easily export current theme configurations for backup or transfer purposes, providing peace of mind and flexibility.</p>
+			</div>
+			
+			<div id="reset">
+				<h4 class="mb-1 font-weight-600 mt-5">3. Reset to Default</h4>
+				<a class="popup-img mt-3 d-block" href="assets/images/screens/reset.webp"><img class="img-fluid border" src="assets/images/screens/reset.webp" alt=""></a>
+				<p>Instantly revert theme settings to their default state, offering a convenient option for troubleshooting or starting anew.</p>
+			</div>
+		</section>
+		
+		<hr class="divider">
+
+		<section id="shufytheme_issues">
+          <h2 class="font-weight-600 mb-1">Common WHMCS issues</h2>
+          <p>you fill find in this section common WHMCS issues and some suggestions to fix them</p>
+		  <p>
+		  If you see an <span class="badge badge-danger text-uppercase mr-2">Oops</span> error page like this indicates an error occurred during the generation of the page.<br>
+		  The error can be anything, from a simple notice or warning to a fatal error that halts execution.<br>
+		  Or you are installing the wrong theme version.<br>
+		  It's the PHP error reporting level on your server that determines which types of errors will trigger it.
+		  </p>
+         
+		  <p>
+		  If you find some error installing the theme like <span class="badge badge-danger text-uppercase mr-2">Missing main.css</span>, white page or something similar, please:<br>
+		   </p>
+		  <ul>
+		  <li>make sure you are uploading the correct file <code>WHMCS(X.X.X)/upload.zip</code>.</li>
+		  <li>make sure that you unpack the zip file after uploading to your server</li>
+		  <li>make sure that you are using the right version for your WHMCS</li>
+		  <li>make sure that you activate the template from your WHMCS admin panel</li>
+		  <li>make sure that the files has the right permission</li>
+		  </ul>
+		  
+		  <p>Or probably has these issues in your server</p>
+		  
+		  <ul>
+		  <li>Syntax errors in custom modules, hooks or templates.</li>
+		  <li>Incompatible hooks or addons.</li>
+		  <li>PHP, Apache or Ioncube related errors.</li>
+		  <li>Missing or corrupted files / incomplete uploads.</li>
+		  <li>If the above suggestions do not solve please contact your hosting provider, or our <a href="https://coodiv.net/">support team</a> will help you with your issue</li>
+		  </ul>
+        </section>
+		
+		
+		<hr class="divider">
+		
+		
+        <section id="shufytheme_support">
+          <h2 class="font-weight-600 mb-1">Support</h2>
+          <p>If this documentation doesn't answer your questions, So, Please send us Email via <a class="btn btn-primary" target="_blank" href="https://themeforest.net/user/coodiv">Item Support Page</a> or <a class="btn btn-primary" target="_blank" href="https://coodiv.net">coodiv support team</a></p>
+		  <p>We are located in GMT+1 time zone and we answer all questions within 12-24 hours in weekdays.<br>
+		  In some rare cases the waiting time can be to 48 hours. (except holiday seasons which might take longer).</p>
+          <div class="alert alert-warning mb-4"><span class="badge badge-danger text-uppercase">Note:</span> While we strive to offer the best support possible, please note that it is only available to verified buyers and pertains solely to issues related to our template, such as bugs and errors. Custom modifications or implementations of third-party modules are not covered.</div>
+		  <h5>Don’t forget to Rate this theme
+			<i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
+		  </h5>
+		  <div class="alert alert-success">
+            We kindly invite you to share your review and opinion of our theme. Your feedback is invaluable to us and greatly supports our efforts.<br>
+            To leave a review, simply navigate to your <b>Themeforest Profile, access the Downloads Tab, and you'll find the option to rate and review our theme</b>.<br>
+			Thank you for your time and support.
+          </div>
+        </section>
+
+		<hr class="divider">
+		
+		
+        <section id="shufytheme_changelog">
+          <h2 class="font-weight-600 mb-1">Changelog</h2>
+          <p>See what's new added, changed, fixed, improved or updated in the latest versions. </p>
+		  <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="https://themeforest.net/user/coodiv">@themeforest</a> / <a target="_blank" href="http://facebook.com/Coodiv/">@facebook</a> / <a target="_blank" href="https://www.instagram.com/coodivnet/">@instagram</a></p>
+   
+   
+		  <h3 id="v1-1-1">Version 1.1.0 <small class="text-muted">(23/06/2024)</small></h3>
+			<p><code>[ FIX ]</code> Image and checkbox reCAPTCHA issues on domain register and transfer pages <br>
+			<code>templates/orderforms/shyfytheme_cart/domainregister.tpl</code>
+			<br>
+			<code>templates/orderforms/shyfytheme_cart/domaintransfer.tpl</code>
+			<br>
+			<code>templates/shufytheme/assets/css/app.min.css</code>
+			<br>
+			<code>templates/shufytheme/assets/css/app.rtl</code>
+			</p>
+			
+			
+          <h3 id="v1-1-0">Version 1.1.0 <small class="text-muted">(20/06/2024)</small></h3>
+			<p class="mb-0"><code>[ FIX ]</code> Searching for unavailable TLDs in domain register page issue</p>
+			<p class="mb-0"><code>[ FIX ]</code> the logo issues in the different layouts ( text & image )</p>
+			<p class="mb-0"><code>[ FIX ]</code> The announcement slider on the login and register page ( text height )</p>
+			<p class="mb-0"><code>[ FIX ]</code> password email rest not working</p>
+			<p class="mb-0"><code>[ FIX ]</code> affiliates number in the client area pages</p>
+			<p class="mb-0"><code>[ FIX ]</code> Using a domain already in the shopping cart to order new hosting on the mobile version</p>
+			<p class="mb-0"><code>[ New ]</code>  Full Supporting for RTL layouts</p>
+			<p class="mb-0"><code>[ New ]</code>  Affiliates page redesigned</p>
+			<p class="mb-0"><code>[ New ]</code>  All of the Marketconnect pages has been improved to match the theme UI</p>
+			<p><code>[ New ]</code>  Activating the Arabic, Hebrew, and Farsi fonts and RTL mode from the admin panel</p>
+         
+
+		 <h3 id="v1-0-1">Version 1.0.1 <small class="text-muted">(15/05/2024)</small></h3>
+			<p><code>[ FIX ]</code> license verification issue: <code>modules/addons/shufyTheme/hooks.php</code></p>
+         
+		 <h3 id="v1-0">Version 1.0 <small class="text-muted">(12/05/2024)</small></h3>
+			<p>Initial Release</p>
+       
+
+	   </section>        
+        
+      </div>
+    </div>
+	
+  </div>
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://www.instagram.com/coodivnet/" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a data-toggle="tooltip" href="https://www.facebook.com/Coodiv/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; <a target="_blank" href="https://coodiv.net">Coodiv</a>. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+<script src="assets/vendor/jquery/jquery.min.js"></script> 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
