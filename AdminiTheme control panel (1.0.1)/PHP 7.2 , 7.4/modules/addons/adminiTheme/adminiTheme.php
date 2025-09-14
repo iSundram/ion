@@ -803,7 +803,10 @@ function adminiTheme_output($vars)
                                                                     if (count($row) !== count($columns)) {
                                                                         $validData = false;
                                                                         $invalidRow = $index + 1;
-                                                                        if ($validData) {
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if ($validData) {
                                                                             Illuminate\Database\Capsule\Manager::table("coodiv__control__colors__settings")->truncate();
                                                                             foreach ($csvData as $row) {
                                                                                 $data = array_combine($columns, $row);
@@ -927,7 +930,10 @@ function adminiTheme_output($vars)
                                                                                         if (count($row) !== count($columns)) {
                                                                                             $validData = false;
                                                                                             $invalidRow = $index + 1;
-                                                                                            if ($validData) {
+                                                                                            break;
+                                                                                        }
+                                                                                    }
+                                                                                    if ($validData) {
                                                                                                 Illuminate\Database\Capsule\Manager::table("coodiv__control__typography__settings")->truncate();
                                                                                                 foreach ($csvData as $row) {
                                                                                                     $data = array_combine($columns, $row);
@@ -1011,7 +1017,10 @@ function adminiTheme_output($vars)
                                                                                                             if (count($row) !== count($columns)) {
                                                                                                                 $validData = false;
                                                                                                                 $invalidRow = $index + 1;
-                                                                                                                if ($validData) {
+                                                                                                                break;
+                                                                                                            }
+                                                                                                        }
+                                                                                                        if ($validData) {
                                                                                                                     Illuminate\Database\Capsule\Manager::table("coodiv__control__layout__settings")->truncate();
                                                                                                                     foreach ($csvData as $row) {
                                                                                                                         $data = array_combine($columns, $row);
@@ -1095,7 +1104,10 @@ function adminiTheme_output($vars)
                                                                                                                                 if (count($row) !== count($columns)) {
                                                                                                                                     $validData = false;
                                                                                                                                     $invalidRow = $index + 1;
-                                                                                                                                    if ($validData) {
+                                                                                                                                    break;
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                            if ($validData) {
                                                                                                                                         Illuminate\Database\Capsule\Manager::table("coodiv__control__sidebar__settings")->truncate();
                                                                                                                                         foreach ($csvData as $row) {
                                                                                                                                             $data = array_combine($columns, $row);
@@ -1179,7 +1191,10 @@ function adminiTheme_output($vars)
                                                                                                                                                     if (count($row) !== count($columns)) {
                                                                                                                                                         $validData = false;
                                                                                                                                                         $invalidRow = $index + 1;
-                                                                                                                                                        if ($validData) {
+                                                                                                                                                        break;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                if ($validData) {
                                                                                                                                                             Illuminate\Database\Capsule\Manager::table("coodiv__control__footer__settings")->truncate();
                                                                                                                                                             foreach ($csvData as $row) {
                                                                                                                                                                 $data = array_combine($columns, $row);
@@ -1305,7 +1320,10 @@ function adminiTheme_output($vars)
                                                                                                                                                                         if (count($row) !== count($columns)) {
                                                                                                                                                                             $validData = false;
                                                                                                                                                                             $invalidRow = $index + 1;
-                                                                                                                                                                            if ($validData) {
+                                                                                                                                                                            break;
+                                                                                                                                                                        }
+                                                                                                                                                                    }
+                                                                                                                                                                    if ($validData) {
                                                                                                                                                                                 Illuminate\Database\Capsule\Manager::table("coodiv__control__homepage__settings")->truncate();
                                                                                                                                                                                 foreach ($csvData as $row) {
                                                                                                                                                                                     $data = array_combine($columns, $row);
